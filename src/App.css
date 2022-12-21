@@ -1,0 +1,106 @@
+html,body,#root,.container-fluid,.row{
+  height:100%;
+}
+body{
+  font-family: cursive!important;
+}
+.App {
+  text-align: center;
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.sideBarDiv{
+  border-top:2px solid white;
+}
+.sideBarDiv ul{
+  padding: auto 10px;
+}
+.sideBarDiv ul li a{
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+}
+.sideBarDiv ul li.active{
+  background-color: aliceblue;
+ 
+}
+.sideBarDiv ul li.active a{
+  color:black;
+}
+.logoImg{
+  width: 100px;
+}
+.headerSection{
+  height: 95px;
+}
+.headerSection .align-r{
+  text-align: right!important;
+}
+.headerSection .align-r .btn{
+  border-radius: 0px;
+  position: absolute;
+  bottom: 0px;
+}
+#loginBtn{
+  right:95px;
+}
+#signUpBtn{
+  right:18px;
+}
+.sideBarSection{
+  height: calc(100% - 150px);
+  top: 88px;
+}
+.sideBarDiv{
+  background-color: #198754;
+  height: 100%;
+}
+.imageUploadDiv{
+  height: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: darkgreen;
+}
+label{
+  font-weight: 500;
+  padding: 2px 0px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
