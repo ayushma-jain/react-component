@@ -4,6 +4,9 @@ import ImageUpload from './pages/Components/ImageUpload';
 import {Route, BrowserRouter, Routes} from 'react-router-dom'
 import './App.css';
 import DataTable from './pages/Components/DataTable';
+import TextUtils from './pages/Components/TextUtils';
+import MyCalendar from './pages/Components/MyCalendar';
+import Dashboard from './pages/Components/Dashboard';
 
 
 
@@ -22,8 +25,12 @@ function App() {
                 
                 <BrowserRouter>
                   <Routes>
+                    <Route exact path="/" element={<Dashboard/>} />
                     <Route exact path="/image-upload" element={<ImageUpload/>} />
                     <Route exact path="/data-table" element={<DataTable/>} />
+                    <Route exact path="/calendar" element={<MyCalendar/>} />
+                    <Route exact path="/text-utils" element={<TextUtils/>} />
+                    
                   </Routes>
               </BrowserRouter>
             </div>

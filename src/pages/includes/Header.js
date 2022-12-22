@@ -20,7 +20,7 @@ function Header(){
         <>
         <nav className="p-2 navbar navbar-dark bg-dark">
             <div className="col-4">
-                <img className="logoImg" src="images/logo.jpg" />
+                <img className="logoImg" alt="" src="images/logo.jpg" />
             </div>
             <div className="col-8 align-r">
                 <button className="btn btn-success" id="loginBtn" onClick={handleLoginOpen}>Login</button>

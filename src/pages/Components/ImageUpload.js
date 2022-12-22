@@ -11,8 +11,14 @@ function ImageUpload(){
     return (
         <>
             <div className="imageUploadDiv">
-                <img src={selectedImage} alt="" value={selectedImage} id="showPreview" className="w-10"/>
-                Upload image
+                <div >
+                    <div className="col-md-3 col-sm-4">
+                        <img src={selectedImage} alt="" value={selectedImage} id="showPreview" className="w-100"/>
+                        Upload image
+                    </div>
+                </div>
+                
+                
                 <input type="file" className="hide" onChange={previewImage}/>
             </div>
         </>
