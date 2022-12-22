@@ -10,7 +10,9 @@ import Dashboard from './pages/Components/Dashboard';
 
 
 
+
 function App() {
+  
   return (
     <>
     <div className='container-fluid'>
@@ -30,7 +32,6 @@ function App() {
                     <Route exact path="/data-table" element={<DataTable/>} />
                     <Route exact path="/calendar" element={<MyCalendar/>} />
                     <Route exact path="/text-utils" element={<TextUtils/>} />
-                    
                   </Routes>
               </BrowserRouter>
             </div>

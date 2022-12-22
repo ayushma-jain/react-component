@@ -1,27 +1,35 @@
-import React, { useState } from "react";
-function ImageUpload(){
-    const [selectedImage, setSelectedImage] = useState(null);
+import React, { useCallback, useState } from "react";
+import cuid from "cuid";
+import Dropzone from "./Dropzone";
+import ImageGrid from "./ImageGrid";
 
-    const previewImage = (event) => {
-        console.log(event.target.files[0]);
+function ImageUpload() {
+  const [images, setImages] = useState([]);
+  const onDrop = useCallback((acceptedFiles) => {
+    acceptedFiles.map((file) => {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        setImages((prevState) => [
+          ...prevState,
+          { id: cuid(), src: e.target.result },
+        ]);
+      };
+      reader.readAsDataURL(file);
+      return file;
+    });
+  }, []);
+  return (
+    <>
+        <h1 className="text-center">Drag and Drop Test</h1>
+        <div className="imageUploadDiv" >
+        <Dropzone onDrop={onDrop} accept={"image/*"} />
+        </div>
+        <ImageGrid images={images} />
         
-        var url = URL.createObjectURL(event.target.files[0]);
-        setSelectedImage(url);
-    }
-    return (
-        <>
-            <div className="imageUploadDiv">
-                <div >
-                    <div className="col-md-3 col-sm-4">
-                        <img src={selectedImage} alt="" value={selectedImage} id="showPreview" className="w-100"/>
-                        Upload image
-                    </div>
-                </div>
-                
-                
-                <input type="file" className="hide" onChange={previewImage}/>
-            </div>
-        </>
-    )
+    </>
+    
+  );
 }
+
+
 export default ImageUpload;

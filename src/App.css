@@ -80,7 +80,13 @@ body{
   background-color: #198754;
   height: 100%;
 }
+/*.imagePreviewDiv{
+  position: relative;
+  opacity: 0.5;
+}*/
 .imageUploadDiv{
+  position: absolute;
+  width: calc(100% - 18%);
   height: 500px;
     border: 2px solid;
     border-radius: 10px;
@@ -104,3 +110,4 @@ label{
     transform: rotate(360deg);
   }
 }
+
