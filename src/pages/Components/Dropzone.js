@@ -1,5 +1,6 @@
 
 import { useDropzone } from "react-dropzone";
+import {FaCloudUploadAlt} from "react-icons/fa";
 function Dropzone({ onDrop, accept, open }) {
   const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
     useDropzone({
@@ -12,17 +13,13 @@ function Dropzone({ onDrop, accept, open }) {
       <div {...getRootProps({ className: "dropzone" })}>
         <input className="input-zone" {...getInputProps()} />
         <div className="text-center">
-          {isDragActive ? (
-            <p className="dropzone-content">
-              Release to drop the files here
-            </p>
-          ) : (
-            <p className="dropzone-content">
-              Drag’ n’ drop some files here, or click to select files
-            </p>
-          )}
+          
+          <p className="dropzone-content">
+            Darg & Drop files and Click to select
+            
+          </p>
           <button type="button" onClick={open} className="btn">
-            Click to select files
+            <FaCloudUploadAlt style={{'height': '100px','width': '50px'}} />
           </button>
         </div>
       </div>

@@ -20,11 +20,15 @@ function ImageUpload() {
   }, []);
   return (
     <>
-        <h1 className="text-center">Drag and Drop Test</h1>
+        <h1 className="text-center">Drag and drop Image Uploader</h1>
         <div className="imageUploadDiv" >
-        <Dropzone onDrop={onDrop} accept={"image/*"} />
+          <Dropzone onDrop={onDrop} accept={"image/*"} />
+          
         </div>
         <ImageGrid images={images} />
+        
+        
+        
         
     </>
     
