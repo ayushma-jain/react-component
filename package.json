@@ -9,10 +9,17 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "cuid": "^2.1.8",
+    "datatable": "^2.0.2",
+    "datatables.net": "^1.13.1",
+    "datatables.net-buttons": "^2.3.3",
+    "datatables.net-dt": "^1.13.1",
+    "jquery": "^3.6.3",
+    "popper.js": "^1.16.1",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.2",
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-modal": "^4.2.0",
+    "react-datatable": "^0.0.31",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.7.1",
@@ -45,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.14",
     "react-router-dom": "^6.4.5"
   }
 }
