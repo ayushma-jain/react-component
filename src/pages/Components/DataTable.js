@@ -15,6 +15,7 @@ import  React, { Component} from "react";
 
 const names = [
   {
+    "id":1,
     "title" : "mr",
     "firstname" : "Lawson",
     "lastname" : "Luke",
@@ -23,6 +24,7 @@ const names = [
     "hobby" : "coding"
   },
   {
+    "id":2,
     "title" : "mr",
     "firstname" : "Michael",
     "lastname" : "Jackson",
@@ -31,6 +33,7 @@ const names = [
     "hobby" : "dancing"
   },
   {
+    "id":3,
     "title" : "mr",
     "firstname" : "Janet",
     "lastname" : "Jackson",
@@ -44,9 +47,8 @@ class DataTable extends Component {
     
   componentDidMount(){
  if (!$.fn.DataTable.isDataTable("#tableok")) {
-  //$( '#tableok' ).DataTable().destroy();
-            $(document).ready(function () {
-              setTimeout(function () {
+  
+           
                 $("#tableok").DataTable({
                   pagingType: "full_numbers",
                   pageLength: 20,
@@ -106,8 +108,7 @@ class DataTable extends Component {
                     },
                   ],
                 });
-              }, 1000);
-            });
+            
           }
 }  
 
@@ -115,7 +116,7 @@ showTable = () => {
         try {
           return names.map((item, index) => {
             return (
-                <tr>
+                <tr key={item.id}>
                 <td className="text-xs font-weight-bold">{index +1}</td>
                <td className="text-xs font-weight-bold">{item.title}</td>
                <td className="text-xs font-weight-bold">{item.firstname+ ' ' + item.lastname}</td>
@@ -133,8 +134,8 @@ showTable = () => {
 
   render(){
   return(
-  <div class="container-fluid py-4">
-         <div class="table-responsive p-0 pb-2">
+  <div className="container-fluid py-4">
+         <div className="table-responsive p-0 pb-2">
        <table id="tableok" className="table align-items-center justify-content-center mb-0">
            <thead>
                <tr>
